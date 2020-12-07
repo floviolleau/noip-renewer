@@ -18,7 +18,7 @@ $ sudo dpkg -i chromium_79.0.3945.130-1~deb10u1_armhf.deb
 $ sudo apt-get install -f
 ```
 
-#### virtualenv
+#### Virtualenv
 
 ```
 $ virtualenv -p python3 ./env
@@ -34,7 +34,7 @@ $ pip3 install -U -r requirements.txt
 $ python3 noip.py 
 ``` 
 
-### crontab
+### Crontab
 
 Change the first line of `noip.py` to the path of the virtualenv:
 

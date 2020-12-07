@@ -1,3 +1,4 @@
+#!/home/user/projects/noip-renewer/env/bin/python
 from selenium import webdriver
 from time import sleep
 from sys import argv

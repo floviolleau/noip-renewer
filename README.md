@@ -18,7 +18,7 @@ $ sudo dpkg -i chromium_79.0.3945.130-1~deb10u1_armhf.deb
 $ sudo apt-get install -f
 ```
 
-#### Vhost
+#### virtualenv
 
 ```
 $ virtualenv -p python3 ./env
@@ -33,14 +33,18 @@ $ pip3 install -U -r requirements.txt
 ```
 $ python3 noip.py 
 ``` 
-   
+
+### crontab
+
+Change the first line of `noip.py` to the path of the virtualenv:
+
+`#!/home/user/projects/noip-renewer/env/bin/python` 
+
+Add to the crontab this:
+
+`30 02 */2 * * /usr/bin/env bash -c 'cd /home/user/projects/noip-renewer && ./noip.py' > /dev/null 2>&1`   
+
 #### Software
 - Python 3
 - [Selenium](https://github.com/SeleniumHQ/Selenium)
 - Chromium Driver
-
-#### Requirements
-
-```bash
-$ pip3 install -U -r requirements.txt
-``` 
